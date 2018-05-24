@@ -1,0 +1,48 @@
+@media PRINT {
+    body {
+        visibility: hidden;
+        min-height: fit-content;
+    }
+
+    .container {
+        margin: 0;
+        display: block;
+    }
+
+    .plan, 
+    .plan * {
+        visibility: visible;
+        background-color: none;
+    }
+
+    .plan__clear,
+    .footer,
+    .plan__clear *,
+    .footer * {
+        visibility: hidden;
+    }
+
+    .plan {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn-delete {
+        display: none;
+    }
+
+    .plan__food,
+    .nutritient__name,
+    .sum__name {
+        width: auto;
+        flex-grow: 1;
+    } 
+
+    .plan__description,
+    .nutritient {
+        border-bottom: 2px solid $color-grey-light;
+    }
+}

@@ -1,0 +1,114 @@
+.food {
+    grid-area: food;
+    border-right: 2px solid $color-grey-light;
+
+    &__content {
+        height: 30rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.7), rgba($color-primary-dark, 0.7));
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    &__calc {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0 ;
+        border-bottom: 2px solid $color-grey-light;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
+        
+        & p {
+            font-size: 2rem;
+            padding-left: 0.5rem;
+            padding-right: 1.5rem;
+        }
+    }
+
+    &__input {
+        height: 4rem;
+        width: 15rem;
+        font-size: 2rem;
+
+        @include inputStyle;
+    }
+
+    &__heading {
+        background-color: $color-primary-light-2;
+        font-weight: 400;
+        font-size: 2rem;
+        padding: .7rem .5rem;
+    }
+
+    &__nutritient {
+        font-size: 2rem;
+        font-weight: 600;
+        padding: .7rem .5rem;
+        display: flex;
+        background-color: $color-primary-light-2;
+        border-bottom: 2px solid $color-grey-light;
+
+        &-title {
+            flex-basis: 60%;
+
+            @media only screen and (max-width: $bp-small) {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    &__proximates-list,
+    &__minerals-list {
+        list-style-type: none;
+    }
+
+    &__item {
+        display: flex;
+        font-size: 1.5rem;
+        padding: .7rem .5rem;
+
+        &:nth-child(2n) {
+            background-color: $color-grey-light;
+        }
+
+        &-name {
+            flex-basis: 60%;
+            
+            @media only screen and (max-width: $bp-small) {
+                flex-grow: 1;
+            }
+        }
+
+        &-count {
+
+            @media only screen and (max-width: $bp-small) {
+                margin-left: .5rem;
+            }
+        }
+    }
+
+    &-popout {
+        display: flex;
+        align-items: center;
+        background-color: $color-white-light;
+        border-radius: 10px;
+        box-shadow: 0 1rem 2.5rem rgba($color-black, 0.2);
+        padding: 2rem;
+        position: absolute;
+        left: -20rem;
+
+        &__text {
+            font-size: 1.6rem;
+            margin-right: 1.5rem;
+        }
+    }
+}

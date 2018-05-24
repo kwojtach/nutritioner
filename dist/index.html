@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <title>Nutritioner</title>
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <img src="img/logo.png" alt="Logo" class="header__logo">
+            <form class="search">
+                <input type="text" class="search__input" placeholder="Search for food">
+                <button class="btn">Search</button>
+            </form>
+            <a href="#" class="print">
+                <i class="print__icon ion-printer"></i>
+            </a>
+        </header>
+
+        <section class="results">
+            <ul class="results__list">
+                <!-- <li>
+                    <a href="#" class="results__item">
+                        <h3 class="results__title">Chicken breast tenders, breaded, uncooked</h3>
+                        <i class="results__icon ion-chevron-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="results__item">
+                        <h3 class="results__title">Fast Foods, Fried Chicken, Breast, meat only, skin and breading removed</h3>
+                        <i class="results__icon ion-chevron-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="results__item">
+                        <h3 class="results__title">Chicken breast</h3>
+                        <i class="results__icon ion-chevron-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="results__item">
+                        <h3 class="results__title">Chicken breast</h3>
+                        <i class="results__icon ion-chevron-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="results__item">
+                        <h3 class="results__title">Chicken breast</h3>
+                        <i class="results__icon ion-chevron-right"></i>
+                    </a>
+                </li> -->
+            </ul>
+            <div class="results__pages">
+                <!-- <button class="btn btn-page">
+                    <i class="ion-chevron-left"></i>
+                    <span>Page 1</span>
+                </button>
+                <button class="btn btn-page">
+                    <span>Page 3</span>
+                    <i class="ion-chevron-right"></i>
+                </button> -->
+            </div>
+        </section>
+
+        <section class="food">
+            <div class="intro">
+                <h2 class="intro__title">Welcome to Nutritioner!</h2>
+                <span class="intro__text">
+                    With this app you can create nutrition plan with ease.
+                    It's simple as:
+                </span>    
+                <ul class="intro__list">
+                    <li class="intro__item">
+                        <span class="intro__number">1</span>
+                        <span class="intro__text">Search for food</span>
+                    </li>
+                    <li class="intro__item">
+                        <span class="intro__number">2</span>
+                        <span class="intro__text">Click on result that matches your request</span>
+                    </li>
+                    <li class="intro__item">
+                        <span class="intro__number">3</span>
+                        <span class="intro__text">Choose weight of the food and add it to your plan</span>
+                    </li>
+                    <li class="intro__item">
+                        <span class="intro__number">4</span>
+                        <span class="intro__text">Modify your plan as you wish to</span>
+                    </li>
+                    <li class="intro__item">
+                        <span class="intro__number">5</span>
+                        <span class="intro__text">Print your plan if you like to</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- <figure class="food__fig">
+                <img src="img/food-table-1.jpg" alt="Food table" class="food__img">
+                <h1 class="food__title">
+                    Chicken breast
+                </h1>
+            </figure>
+            <form class="food__calc">
+                <input class="food__input" type="number" value="100" step="1">
+                <p>g</p>
+                <button class="btn btn-add">
+                    <i class="ion-plus-round"></i>
+                    <span>Add to the list</span>
+                </button>
+            </form>
+            <div class="food__nutritient">
+                <span class="food__nutritient-title">Nutritient</span>
+                <span class="food__nutritient-value">Value per 100g</span>
+            </div>
+            <div class="food__proximates">
+                <h2 class="food__heading">Proximates</h2>
+                <ul class="food__proximates-list">
+                    <li class="food__item">
+                        <div class="food__item-name">Energy (E)</div>
+                        <div class="food__item-count">
+                            <span class="food__item-number">150</span>
+                            <span class="food__item-unit">kcal</span>
+                        </div>
+                    </li>
+                    <li class="food__item">
+                        <div class="food__item-name">Protein (P)</div>
+                        <div class="food__item-count">
+                            <span class="food__item-number">15</span>
+                            <span class="food__item-unit">g</span>
+                        </div>
+                    </li>
+                    <li class="food__item">
+                        <div class="food__item-name">Total lipid (F)</div>
+                        <div class="food__item-count">
+                            <span class="food__item-number">5</span>
+                            <span class="food__item-unit">g</span>
+                        </div>
+                    </li>
+                    <li class="food__item">
+                        <div class="food__item-name">Carbohydrate (C)</div>
+                        <div class="food__item-count">
+                            <span class="food__item-number">3</span>
+                            <span class="food__item-unit">g</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="food__minerals">
+                <h2 class="food__heading">Minerals</h2>
+                <ul class="food__minerals-list">
+                    <li class="food__item">
+                        <div class="food__item-name">Calcium, Ca</div>
+                        <div class="food__item-count">
+                            <span class="food__item-number">150</span>
+                            <span class="food__item-unit">mg</span>
+                        </div>
+                    </li>
+                    <li class="food__item">
+                        <div class="food__item-name">Iron, Fe</div>
+                        <div class="food__item-count">
+                            <span class="food__item-number">15</span>
+                            <span class="food__item-unit">mg</span>
+                        </div>
+                    </li>
+                    <li class="food__item">
+                        <div class="food__item-name">Magnesium, Mg</div>
+                        <div class="food__item-count">
+                            <span class="food__item-number">5</span>
+                            <span class="food__item-unit">mg</span>                            
+                        </div>
+                    </li>
+                    <li class="food__item">
+                        <div class="food__item-name">Phosphorus, P</div>
+                        <div class="food__item-count">
+                            <span class="food__item-number">3</span>
+                            <span class="food__item-unit">mg</span>                            
+                        </div>
+                    </li>
+                    <li class="food__item">
+                        <div class="food__item-name">Potassium, K</div>
+                        <div class="food__item-count">
+                            <span class="food__item-number">0</span>
+                            <span class="food__item-unit">mg</span>                            
+                        </div>
+                    </li>
+                    <li class="food__item">
+                        <div class="food__item-name">Sodium, Na</div>
+                        <div class="food__item-count">
+                            <span class="food__item-number">150</span>
+                            <span class="food__item-unit">mg</span>
+                        </div>
+                    </li>
+                    <li class="food__item">
+                        <div class="food__item-name">Zinc, Zn</div>
+                        <div class="food__item-count">
+                            <span class="food__item-number">150</span>
+                            <span class="food__item-unit">mg</span>
+                        </div>
+                    </li>
+                </ul>
+            </div> -->
+        </section>
+        <section class="plan">
+            <div class="plan__description">
+                <span class="plan__food">Food</span>
+                <span class="plan__weight">Weight<div class="plan__unit">[g]</div></span>
+                <span class="plan__proximate">E<div class="plan__unit">[kcal]</div></span>
+                <span class="plan__proximate">P<div class="plan__unit">[g]</div></span>                            
+                <span class="plan__proximate">F<div class="plan__unit">[g]</div></span>
+                <span class="plan__proximate">C<div class="plan__unit">[g]</div></span>
+            </div>
+            <ul class="plan__list">
+                <!-- <li class="nutritient">
+                    <span class="nutritient__name">
+                        Chicken breast tenders, breaded, uncooked
+                        <button class="btn btn-small">
+                                <i class="ion-android-close"></i>
+                        </button>
+                    </span>
+                    <form class="nutritient__form">
+                        <input class="nutritient__input" type="number" value="100" step="1">
+                        <button class="btn btn-small">
+                            <i class="ion-ios-calculator-outline"></i>
+                        </button>
+                    </form>
+                    <span class="nutritient__proximate">150</span>
+                    <span class="nutritient__proximate">15</span>
+                    <span class="nutritient__proximate">5</span>
+                    <span class="nutritient__proximate">3</span>
+                </li>
+                <li class="nutritient">
+                    <span class="nutritient__name">
+                        Chicken breast
+                        <button class="btn btn-small">
+                                <i class="ion-android-close"></i>
+                        </button>
+                    </span>
+                    <form class="nutritient__form">
+                        <input class="nutritient__input" type="number" value="100" step="1">
+                        <button class="btn btn-small">
+                            <i class="ion-ios-calculator-outline"></i>
+                        </button>
+                    </form>
+                    <span class="nutritient__proximate">150</span>
+                    <span class="nutritient__proximate">15</span>
+                    <span class="nutritient__proximate">5</span>
+                    <span class="nutritient__proximate">3</span>
+                </li>
+                <li class="nutritient">
+                    <span class="nutritient__name">
+                        Chicken breast
+                        <button class="btn btn-small">
+                                <i class="ion-android-close"></i>
+                        </button>
+                    </span>
+                    <form class="nutritient__form">
+                        <input class="nutritient__input" type="number" value="100" step="1">
+                        <button class="btn btn-small">
+                            <i class="ion-ios-calculator-outline"></i>
+                        </button>
+                    </form>
+                    <span class="nutritient__proximate">150</span>
+                    <span class="nutritient__proximate">15</span>
+                    <span class="nutritient__proximate">5</span>
+                    <span class="nutritient__proximate">3</span>
+                </li>
+                <li class="nutritient">
+                    <span class="nutritient__name">
+                        Chicken breast
+                        <button class="btn btn-small">
+                                <i class="ion-android-close"></i>
+                        </button>
+                    </span>
+                    <form class="nutritient__form">
+                        <input class="nutritient__input" type="number" value="100" step="1">
+                        <button class="btn btn-small">
+                            <i class="ion-ios-calculator-outline"></i>
+                        </button>
+                    </form>
+                    <span class="nutritient__proximate">150</span>
+                    <span class="nutritient__proximate">15</span>
+                    <span class="nutritient__proximate">5</span>
+                    <span class="nutritient__proximate">3</span>
+                </li>
+
+                <li class="nutritient nutritient--active">
+                    <span class="nutritient__name">
+                        Chicken breast
+                    </span>
+                    <div class="nutritient__options">
+                        <input class="nutritient__input" type="number" value="100" step="1">
+                        <button class="btn btn-small btn-delete">
+                            <i class="ion-android-close"></i>
+                        </button>
+                    </div>
+                    <span class="nutritient__proximate">150</span>
+                    <span class="nutritient__proximate">15</span>
+                    <span class="nutritient__proximate">5</span>
+                    <span class="nutritient__proximate">3</span>
+                    <div class="food-popout">
+                        <span class="food-popout__text">You have already added this food</span>
+                        <button class="btn btn-small btn-close">
+                            <i class="ion-android-close"></i>
+                        </button>
+                    </div>
+                </li> 
+                -->
+            </ul>
+            <div class="plan__sum">
+                <div class="sum__name">Summary</div>
+                <div class="sum__all">0</div>
+                <div class="sum__proximate">0</div>
+                <div class="sum__proximate">0</div>
+                <div class="sum__proximate">0</div>
+                <div class="sum__proximate">0</div>
+            </div>
+            <div class="plan__clear">
+                <button class="btn btn-remove">
+                    <i class="ion-android-close"></i>
+                    <span>Remove all foods</span>
+                </button>
+            </div>
+            <div class="footer">
+                Copyright &copy; by <a href="https://github.com/kwojtach" target="_blank" class="footer__link">Krzysztof Wojtach</a>. 
+                Powered by <a href="https://www.nal.usda.gov" target="_blank" class="footer__link">United States Department of Agriculture</a>
+            </div>
+            <!-- <div class="plan-popout">
+                <span class="plan-popout__text">Are you sure?</span>
+                <div class="plan-popout__buttons">
+                    <button class="btn btn-small">Y</button>
+                    <button class="btn btn-small">N</button>
+                </div>
+            </div> -->
+        </section>
+
+    </main>
+    
+    <!-- <div class="loader">
+        <i class="loader__icon ion-load-a"></i>
+    </div> -->
+
+
+<script type="text/javascript" src="js/bundle.js"></script></body>
+</html>

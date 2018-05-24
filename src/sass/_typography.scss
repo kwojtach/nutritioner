@@ -1,0 +1,54 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        padding: 1.8rem 3rem;
+        font-size: 1.5rem;
+        background-color: $color-primary;
+        border-radius: 10rem;
+        border: none;
+        color: $color-white-light;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary-dark;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &-page {
+        font-size: 1.2rem;
+        padding: 1rem 1.5rem;
+
+        &--prev {
+            float: left;
+            flex-direction: row-reverse;
+        }
+
+        &--next {
+            float: right;
+        }
+    }
+
+    &-add,
+    &-remove {
+        padding: 1.25rem 2rem;
+    }
+
+    &-small {
+        height: 3rem;
+        width: 3rem;
+        padding: .7rem .5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+}

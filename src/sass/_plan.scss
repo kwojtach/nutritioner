@@ -1,0 +1,136 @@
+.plan {
+    grid-area: plan;
+
+    &__description,
+    &__sum {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-primary-light-2;
+        font-size: 2rem;
+        font-weight: 600;
+        height: 7rem;
+    }
+
+    &__clear {
+        display: flex;
+        justify-content: center;
+    }
+
+//     <div class="plan-popout">
+//     <span class="plan-popout__text">Are you sure?</span>
+//     <div class="plan-popout__buttons">
+//         <button class="btn btn-small">Y</button>
+//         <button class="btn btn-small">N</button>
+//     </div>
+// </div>
+
+    &__list {
+        list-style-type: none;
+    }
+
+    &__food {
+        width: 40%;
+        padding: .7rem .5rem;
+    }
+
+    &__weight {
+        text-align: center;
+        width: 11rem;
+        padding: .7rem .5rem;
+    }
+  
+    &__proximate {
+        text-align: center;
+        width: 8rem;
+        padding: .7rem .5rem;
+    }
+
+    &-popout {
+        background-color: $color-white-light;
+        border-radius: 10px;
+        box-shadow: 0 1rem 2.5rem rgba($color-black, 0.2);
+        padding: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &__text {
+            font-size: 1.6rem;
+        }
+
+        &__buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+.nutritient {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    align-items: center;
+    height: 7rem;
+    border: 2px solid transparent;
+
+    &:nth-child(2n) {
+        background-color: $color-grey-light;
+    }
+
+    &--active {
+        border: 2px solid $color-primary;
+        position: relative;
+    }
+
+    &__name {
+        width: 40%;
+        padding: .7rem .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__options {
+        display: flex;
+        width: 11rem;
+        padding: .7rem .5rem;
+    }
+
+    &__proximate {
+        text-align: center;
+        width: 8rem;
+        padding: .7rem .5rem;
+    }
+
+    &__input {
+        width: 8rem;
+        padding: .7rem 0;
+        font-size: 1.5rem;
+
+        @include inputStyle;
+    }
+}
+
+.sum {
+    display: flex;
+
+    &__name {
+        width: 40%;
+        padding: .7rem .5rem;
+    }
+
+    &__all {
+        text-align: center;
+        width: 11rem;
+        padding: .7rem .5rem;
+    }
+  
+    &__proximate {
+        text-align: center;
+        width: 8rem;
+        padding: .7rem .5rem;
+    }
+}

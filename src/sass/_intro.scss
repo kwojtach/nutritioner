@@ -1,0 +1,38 @@
+.intro {
+    padding: 2rem 1rem;
+
+    &__title {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 2rem;
+    }
+
+    &__number {
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        font-size: 2rem;
+        margin-right: 1rem;
+        border: 2px solid $color-primary;
+        border-radius: 50%;
+
+    }
+}
